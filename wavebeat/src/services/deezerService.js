@@ -1,15 +1,10 @@
-import axios from "axios";
-
-const DEEZER_BASE = "https://api.deezer.com";
+const BASE_URL = "https://corsproxy.io/?https://api.deezer.com";
 
 export async function searchTracks(query) {
-  try {
-    const response = await axios.get(`https://cors-anywhere.herokuapp.com/${DEEZER_BASE}/search`, {
-      params: { q: query },
-    });
-    return response.data.data; // array of tracks
-  } catch (error) {
-    console.error("Error fetching tracks:", error);
-    return [];
-  }
+  const res = await fetch(`${BASE_URL}/search?q=${encodeURIComponent(query)}`);
+  const data = await res.json();
+
+  console.log("DEEZEER RESPONSE:", data);
+
+  return data.data || [];
 }
