@@ -18,3 +18,5 @@ export default function TrackCard({ track, onPlay }) {
     </div>
   );
 }
+
+//this section selects a song
