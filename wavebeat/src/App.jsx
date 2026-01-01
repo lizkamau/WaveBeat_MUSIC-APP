@@ -12,7 +12,7 @@ export default function App() {
     const results = await searchTracks(query);
     setTracks(results);
     if (results.length === 0) {
-      alert("No tracks found.");
+      alert("No tracks found."); 
     }
   };
 
