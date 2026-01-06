@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+}
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -8,7 +15,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #6c6adf;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,12 +51,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f00c89;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #f712c9;
 }
 button:focus,
 button:focus-visible {
